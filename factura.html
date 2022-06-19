@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <title>Factura</title>
+</head>
+
+<body onload="imprimirFactura()">
+    <h1 class="text-center fw-bolder display-5">Factura</h1>
+    <!-- Filas y columnas, HTML puro -->
+    <div class="container" style="font-size: 25px;" >
+        <div class="row">
+            <div class="col-3">Fecha: </div>
+            <div class="col-3" id="fecha"></div>
+            <div class="col-2 text-end">Tasa de cambio: </div>
+            <div class="col-3" id="tasa"></div>
+        </div>
+        <div class="row">
+            <div class="col-3">Nombre: </div>
+            <div class="col-8" id="nombre"></div>
+        </div>
+        <div class="row">
+            <div class="col-3">Cedula: </div>
+            <div class="col-3" id="cedula"></div>
+            <div class="col-2 text-end">Telefono: </div>
+            <div class="col-3 text-start" id="telefono"></div>
+        </div>
+        <div class="row" id="productos">
+            <h3 class="text-center">Productos</h3>
+            <!-- En este espacion van los productos con el precio -->
+        </div>
+        <div class="row" id="subTotal">
+            <!-- En este espacion van los productos con el subTotal -->
+        </div>
+        <div class="row" id="total">
+            <!-- En este espacion va el total-->
+        </div>
+        <div class="row text-center mb-5 justify-content-center">
+            <div class="col-6">
+                <button class='btn-lg btn-dark text-center fw-bolder text-uppercase' onclick="location.href='index.html'">Nuevo pedido</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

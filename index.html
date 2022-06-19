@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <title>Productos</title>
+</head>
+
+<body>
+    <h1 class="text-center fw-bolder display-5">Productos</h1>
+    <div class="container">
+        <p class="fw-bolder text-uppercase me-4 d-inline-block">Seleccion la tasa de cambio:</p>
+        <select class="form-select d-inline-block" id="tasaCambio" style="width: 150px;" onchange="cambioTasa()">
+            <option value="peso">Pesos</option>
+            <option value="dolar">Dolares</option>
+            <option value="euro">Euros</option>
+        </select>
+    </div>
+    <div class="container mb-5">
+        <div class="row" id="cards">
+            <!-- En este espacio van los cards -->
+        </div>
+
+    </div>
+    <div class="text-center">
+        <button class='btn-lg btn btn-dark text-center fw-bolder text-uppercase mb-5' data-bs-toggle="modal"
+            data-bs-target="#miModal">Generar Factura</button>
+    </div>
+    <!--        MODAL      -->
+    <!-- Documentacion bootstrap -->
+    <div class="modal fade" id="miModal" tabindex="-1" aria-labelledby="modalTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalTitle">Ingrese los siguientes datos</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="modalBody">
+                    <form>
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="nombreUsuario" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="telefono" class="form-label">Telefono</label>
+                            <input type="number" class="form-control" id="telefonoUsuario">
+                        </div>
+                        <div class="mb-3">
+                            <label for="cedula" class="form-label">Cedula</label>
+                            <input type="number" class="form-control" id="cedulaUsuario">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button class='btn btn-dark text-center fw-bolder text-uppercase' onclick="generarFactura()">Generar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
